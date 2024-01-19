@@ -1,0 +1,218 @@
+@import "reset.css";
+
+/* GENERAL */
+body {
+    color: #666666;
+    font-family: Calibri, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 9pt;
+    line-height: 12pt;
+    margin: 0;
+    padding: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    font-weight: 325;
+    margin-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6 {
+    display: block;
+    font-family: Calibri, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+h1 {
+    font-size: 1rem;
+}
+h2 {
+    font-size: 0.8rem;
+}
+h3 {
+    font-size: 0.7rem;
+}
+h4 {
+    font-size: 0.65rem;
+}
+
+a, a:visited {
+    color: #0099D8;
+    text-decoration: underline;
+}
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: solid 1px #DDD;
+    padding: 2px;
+}
+th {
+    font-weight: bold;
+    text-align: center;
+}
+td {
+    text-align: left;
+}
+
+#prod-tbl td {
+    border: none;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=date], input[type=url], input[type=checkbox], select, textarea {
+    border: solid 1px #999;
+    color: #666666;
+    font-family: Calibri, 'Lucida Sans Unicode', Arial, sans-serif;
+    font-size: 9pt;
+    padding: 2px 2px;
+}
+input[type=submit], input[type=button] {
+    background: #51B58E;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    padding: 4px 8px;
+}
+select, option {
+    color: #666666;
+    font-family: Calibri, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 9pt;
+}
+
+button {
+    background-color: #eee;
+    border: solid 1px #999;
+    border-radius: 3px;
+    color: #666;
+    cursor: pointer;
+    display: block;
+    font-family: Calibri, "Lucida Sans Unicode", Arial, sans-serif;
+    font-size: 1.0em;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+button:hover {
+    opacity: .8;
+    filter: alpha(opacity=50);
+}
+fieldset + div > button {
+    margin-top: 15px;
+}
+button + a {
+    display: block;
+    margin-top: 10px;
+}
+
+.fas {
+    color: #888;
+}
+
+.tool-tip {
+    cursor: help;
+}
+
+fieldset {
+    margin-bottom: 10px;
+}
+fieldset > label {
+    display: block;
+    margin-bottom: 2px;
+    white-space: nowrap;
+}
+
+.dropdown {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 125px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px 10px;
+    z-index: 1;
+}
+.dropdown:hover {
+    cursor: pointer;
+}
+.dropdown:hover .dropdown-content {
+    cursor: default;
+    display: block;
+}
+#prod-controls {
+    margin-bottom: 10px; 
+    width: 100%;
+}
+.prod-container {
+    clear: left;
+}
+.prod-card {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    float: left;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    max-width: 150px;
+    min-width: 150px;
+    padding: 10px 10px;
+}
+.prod-card p, td, ul li {
+    font-size: 0.6rem;
+}
+.prod-card p > img {
+    height: 90px;
+}
+.prod-card ul {
+    list-style: disc outside;
+    margin: 0 0 0 15px;
+}
+.prod-card li::marker {
+    content: initial; /* Restores bullet point for LI tags */
+}
+div.prod-card h3 + p {
+    text-align: center;
+}
+
+footer > p {
+    max-width: 850px;
+}
+
+/* LAYOUT */
+#grid-container {
+    display:grid;
+    grid-template-areas: /* Default layout [will be used on small devices < 768px viewport] */
+        'header'
+        'main-content'
+        'footer';
+    grid-template-rows: auto 1fr auto; /* Corresponds to the order in grid-template-areas */
+    min-height:100vh; /* fallback height */
+    min-height:100svh; /* new small viewport height for modern browsers */
+    width: 100%;
+}
+
+/* general column padding */
+#grid-container > * {
+    padding: 1rem;
+}
+
+/* assign columns to grid areas */
+#grid-container > header {
+    grid-area:header;
+}
+
+#grid-container > #main-content {
+    grid-area:main-content;
+}
+
+#grid-container > footer {
+    grid-area:footer;
+}
+
+/* tablet breakpoint */
+@media (min-width:768px) { /* Sets layout for devices with at least 768px wide viewport */
+
+}
