@@ -163,7 +163,7 @@ fieldset > label {
 .prod-card p, td, ul li {
     font-size: 0.6rem;
 }
-.prod-card p > img {
+.prod-card p a > img {
     height: 90px;
 }
 .prod-card ul {
@@ -173,8 +173,11 @@ fieldset > label {
 .prod-card li::marker {
     content: initial; /* Restores bullet point for LI tags */
 }
-div.prod-card h3 + p {
+.prod-card h3 + p {
     text-align: center;
+}
+.prod-cart a {
+    text-decoration: none;
 }
 
 footer > p {
